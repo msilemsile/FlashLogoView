@@ -13,8 +13,6 @@ import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 
-import me.msile.train.videoparse.utils.DensityUtil;
-
 public class FlashLogoView extends View implements Choreographer.FrameCallback {
 
     private int clipColor = 0xff000000;
@@ -31,7 +29,7 @@ public class FlashLogoView extends View implements Choreographer.FrameCallback {
     private int measureWidth;
     private int measureHeight;
     private ValueAnimator clipAnimator;
-    private int textDPSize = 25;
+    private int textDPSize = 50;
     private Path tempPath;
 
     public FlashLogoView(Context context) {
@@ -52,7 +50,6 @@ public class FlashLogoView extends View implements Choreographer.FrameCallback {
 
         tempPath = new Path();
 
-        textDPSize = DensityUtil.dip2px(textDPSize);
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setColor(textColor);
         textPaint.setTextSize(textDPSize);
